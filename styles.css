@@ -1,0 +1,93 @@
+@font-face {
+	font-family: 'GoogleSans'; 
+	src: url(GoogleSansText-Regular.ttf); 
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'GoogleSans';
+    background-color: #f5fff6;
+    margin: 0;
+}
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+    background-color: #ffffff;
+    margin: 30px 0px 30px 0px;
+    border-radius: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.096);
+}
+.list_icon {
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+}
+.account_icon {
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+}
+.title {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+.calendar {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+.list {
+    display: flex;
+    width: 500px;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.096);
+    border-radius: 100px;
+}
+.date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    height: 27px;
+    width: 30px;
+    margin: 10px 10px 10px 30px;
+    background-color: #78e487;
+    border-radius: 100px;
+}
+.date_title {
+    display: flex;
+    margin: 0px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.date_name {
+    display: flex;
+    margin: 0px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.event_status {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.times {
+    color: rgba(0, 0, 0, 0.603);
+    margin: 0px 0px 0px 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
