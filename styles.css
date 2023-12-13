@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'GoogleSans'; 
-	src: url(GoogleSansText-Regular.ttf); 
+	src: url(fonts/GoogleSansText-Regular.ttf); 
 }
 body {
     display: flex;
@@ -49,6 +49,7 @@ body {
     background-color: white;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.096);
     border-radius: 100px;
+    margin: 10px;
 }
 .date {
     display: flex;
@@ -86,8 +87,70 @@ body {
 .times {
     color: rgba(0, 0, 0, 0.603);
     margin: 0px 0px 0px 10px;
+    padding-top: 1px;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+#dialog {
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.list_item {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+.list_item:hover {
+    background-color: rgb(189, 254, 0);
+    color:black;
+}
+.abovelist {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+.abovelist:hover {
+    background-color: rgb(189, 254, 0);
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color:black;
+}
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    flex-direction: column;
+    width: 200px;
+}
+.menu-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: left;
+}
+.menu:hover .menu-content {
+    display: flex;
+    flex-direction: column;
 }

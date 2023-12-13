@@ -5,22 +5,63 @@
 <script src="script.js"></script>
 <body>
     <div class="toolbar">
-        <img class="list_icon" src="list.png"/>
+        <img class="list_icon" src="img/list.png"/>
         <h2 class="title">Мои Активности</h2>
-        <img class="account_icon" src="account.png"/>
+        <img class="account_icon" src="img/account.png"/>
     </div>
     <div class="main">
         <div class="calendar">
             <ul>
-                <li class="list">
+                <li class="list" id="list">
                     <div class="date">
                         <h3 class="date_title">1</h3>
-                        <h6 class="date_name">П-т</h6>
+                        <h6 class="date_name">Пт</h6>
+                    </div>
+                    <h4 class="event_status">Мероприятий нет</h4>
+                    <h5 class="times">10:00-11:00 12:30-14:00 15:10-17:20</h5>
+                </li>
+                <li class="list">
+                    <div class="date">
+                        <h3 class="date_title">2</h3>
+                        <h6 class="date_name">Сб</h6>
+                    </div>
+                    <h4 class="event_status">Мероприятий нет</h4>
+                    <h5 class="times">10:00-11:00 12:30-14:00 15:10-17:20</h5>
+                </li>
+                <li class="list">
+                    <div class="date">
+                        <h3 class="date_title">3</h3>
+                        <h6 class="date_name">Вс</h6>
+                    </div>
+                    <h4 class="event_status">Мероприятий нет</h4>
+                    <h5 class="times">10:00-11:00 12:30-14:00 15:10-17:20</h5>
+                </li>
+                <li class="list">
+                    <div class="date">
+                        <h3 class="date_title">4</h3>
+                        <h6 class="date_name">Пн</h6>
                     </div>
                     <h4 class="event_status">Мероприятий нет</h4>
                     <h5 class="times">10:00-11:00 12:30-14:00 15:10-17:20</h5>
                 </li>
             </ul>
+            <dialog id="dialog">
+                <h2>Назначить мероприятие?</h2>
+                <div class="row">
+                    <h3>Выберите из списка:</h3>
+                    <ul>
+                        <li class="menu">
+                          <a class="abovelist" href="#">Абитуриентам</a>
+                          <ul class="menu-content">
+                              <li><a class="list_item" href="#">Высшее образование - бакалавриват и специалитет </a></li>
+                              <li><a class="list_item" href="#">Высшее образование - магистратура</a></li>
+                              <li><a class="list_item" href="#">Высшее образование - аспирантура</a></li>
+                              <li><a class="list_item" href="#">Высшее образование - ассистентура - стажировка</a></li>
+                          </ul>
+                        </li>
+                    </ul>
+                </div>
+            </dialog>
         </div>
     </div>
 </body>
