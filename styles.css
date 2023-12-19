@@ -94,6 +94,12 @@ body {
     filter: blur(0);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.096);
 }
+.event_icon {
+    filter: blur(0);
+    width: 25px;
+    height: 25px;
+    padding: 20px;
+}
 .title {
     z-index: 2;
     filter: blur(0);
@@ -165,13 +171,23 @@ body {
     text-shadow: 0 0 5px #000000;
 }
 #dialog {
+    background: transparent;
+    backdrop-filter: blur(20px);
     border-radius: 10px;
     width: 500px;
     height: 500px;
+    color: white;
 }
 .row {
     display: flex;
     flex-direction: row;
+}
+.row_left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    text-align: center;
 }
 ul {
     list-style-type: none;
@@ -181,7 +197,7 @@ ul {
 }
 .list_item {
     display: block;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 10px;
     text-decoration: none;
@@ -192,11 +208,12 @@ ul {
 }
 .abovelist {
     display: block;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 10px;
-    margin-top: 12px;
+    margin-top: 3px;
     text-decoration: none;
+    background: none;
 }
 .abovelist:hover {
     background-color: #78e487;
@@ -225,4 +242,9 @@ ul {
 .menu:hover .menu-content {
     display: flex;
     flex-direction: column;
+}
+#ok {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
