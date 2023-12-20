@@ -23,7 +23,12 @@ body {
     flex-direction: column;
 }
 .event-plan {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 750px;
+}
+#box-plan {
+    display: none;
 }
 .box {
     top: 0;
@@ -40,6 +45,9 @@ body {
     padding-right: 5px;
 }
 .event_time {
+    padding-right: 20px;
+}
+.event_emp {
     padding-right: 20px;
 }
 .bien-glass {
@@ -369,15 +377,19 @@ ul {
     margin: 10px;
     width: 100px;
     border: 1px white;
+    font-family: 'GoogleSans'; 
+	src: url(fonts/GoogleSansText-Regular.ttf); 
 }
 .canceld_button {
-    background-color: rgb(117, 7, 7);
+    background-color: #234f92;
     border-radius: 100px;
-    color: black;
+    color: rgb(255, 255, 255);
     margin: 10px;
     padding: 10px;
     width: 100px;
-    border: 1px rgb(110, 13, 13);
+    border: 1px rgb(20, 28, 148);
+    font-family: 'GoogleSans'; 
+	src: url(fonts/GoogleSansText-Regular.ttf); 
 }
 .ban {
     filter: blur(0);

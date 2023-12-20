@@ -1,3 +1,4 @@
+// localStorage.clear();
 document.addEventListener('DOMContentLoaded', function () {
   // Функция для обработки списка
   function handleList(menu, aboveList, key) {
@@ -34,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var employeeAboveList = employeeMenu.querySelector('.abovelist');
   handleList(employeeMenu, employeeAboveList, 'employee');
 
+  var box_plan = document.getElementById('box-plan');
+
   // Обновление данных при загрузке страницы
   var currentUser = localStorage.getItem('currentUser');
   if (currentUser) {
@@ -44,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
       eventAboveList.textContent = userEvents['event'];
       document.querySelector('.event_title').textContent = userEvents['event'];
       document.querySelector('.event_status').textContent = "Есть мероприятие";
+      box_plan.style.display = 'block';
     }
 
     // Обновление второго списка
@@ -65,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var dialog = document.getElementById("dialog");
   var okd_button = document.getElementById("okd_button");
   var canceld_button = document.getElementById("canceld_button");
+  var box_plan = document.getElementById('box-plan');
 
   // Навешиваем обработчик на событие клик
   list.addEventListener('click', function () {
@@ -91,7 +96,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.event_time').textContent = selectedTime;
                 document.querySelector('.event_emp').textContent = selectedEmp;
                 document.querySelector('.event_status').textContent = "Есть мероприятие";
-  
+                box_plan.style.display = 'block';
+
                 // Закрываем диалоговое окно
                 dialog.close();
                 alert('Создано мероприятие');
