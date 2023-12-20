@@ -1,24 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
-
   // Функция для обработки списка
-  function handleList(menu, aboveList) {
-      var listItems = menu.querySelectorAll('.list_item');
-      
-      listItems.forEach(function (item) {
-          item.addEventListener('click', function () {
-              var selectedItemText = item.textContent;
-              aboveList.textContent = selectedItemText;
-              // Сохранение выбранного значения в localStorage
-              var currentUser = localStorage.getItem('currentUser');
-              if (currentUser) {
-                var userEvents = JSON.parse(localStorage.getItem(currentUser)) || {};
-                userEvents[key] = selectedItemText;
-                localStorage.setItem(currentUser, JSON.stringify(userEvents));
-              }
-          });
+  function handleList(menu, aboveList, key) {
+    var listItems = menu.querySelectorAll('.list_item');
+
+    listItems.forEach(function (item) {
+      item.addEventListener('click', function () {
+        var selectedItemText = item.textContent;
+        aboveList.textContent = selectedItemText;
+
+        // Сохранение выбранного значения в localStorage
+        var currentUser = localStorage.getItem('currentUser');
+        if (currentUser) {
+          var userEvents = JSON.parse(localStorage.getItem(currentUser)) || {};
+          userEvents[key] = selectedItemText;
+          localStorage.setItem(currentUser, JSON.stringify(userEvents));
+        }
       });
+    });
   }
-  
+
   // Обработка первого списка
   var eventMenu = document.getElementById('menu_event');
   var eventAboveList = eventMenu.querySelector('.abovelist');
@@ -42,19 +42,20 @@ document.addEventListener('DOMContentLoaded', function () {
     // Обновление первого списка
     if (userEvents['event']) {
       eventAboveList.textContent = userEvents['event'];
-      document.querySelector('.event_status').textContent = userEvents['event'];
-
+      document.querySelector('.event_title').textContent = userEvents['event'];
+      document.querySelector('.event_status').textContent = "Есть мероприятие";
     }
 
     // Обновление второго списка
     if (userEvents['time']) {
       timeAboveList.textContent = userEvents['time'];
-      document.querySelector('.times').textContent = userEvents['time'];
+      document.querySelector('.event_time').textContent = userEvents['time'];
     }
 
     // Обновление третьего списка
     if (userEvents['employee']) {
       employeeAboveList.textContent = userEvents['employee'];
+      document.querySelector('.event_emp').textContent = userEvents['employee'];
     }
   }
 });
