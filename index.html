@@ -1,25 +1,57 @@
-<head>
+<html>
+    <head>
     <title>Активности</title>
-</head>
-<link rel="stylesheet" href="styles.css">
-<script src="script.js"></script>
-<body>
+    </head>
+    <link rel="stylesheet" href="styles.css">
+
+    <body>
     <nav class="toolbar">
         <div class="bien-glass"></div>
         <div class="bien-glass-edge"></div>
         <img class="list_icon" src="img/list.png"/>
         <h2 class="title">Мои Активности</h2>
-        <!-- <img class="account_icon" src="img/account.png"/> -->
-    </nav>
-    <div class="main">
+        <div class="row_right_nav">
+            <p id="userInfo" class="UserInfo"></p>
             <ul>
-                <li class="list" id="list">
-                    <div class="date">
-                        <h3 class="date_title">1</h3>
-                        <h6 class="date_name">Пт</h6>
-                    </div>
-                    <h4 class="event_status">Мероприятий нет</h4>
-                    <h5 class="times">10:00-11:00 12:30-14:00 15:10-17:20</h5>
+                <li class="menu">
+                  <a class="abovelist" href="#"><img class="account_icon" src="img/account.png"/></a>
+                  <ul class="menu-content-left">
+                        <li><a class="list_item" id="ChatBtn">Сообщения</a></li>
+                        <li><a class="list_item" id="LogOutBtn">Выйти</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="main">
+        <div class="event-plan">
+            <div class="box">
+                <div class="row_left">
+                    <img class="list_icon" src="img/list.png"/>
+                    <h3 class="event_title">Понедельник в</h3>
+                    <h3 class="event_time">0:00</h3>
+                </div>
+                <div class="row_left">
+                    <img class="person_icon" src="img/person.png"/>
+                    <h3 class="event_emp">Аня дедовская</h3>
+                </div>
+                <div class="row_left">
+                    <img class="event_icon" src="img/event.png"/>
+                    <h4 class="event_name">День рождение</h4>
+                </div>
+            </div>
+        </div>
+        <ul class="date-list">
+            <li class="list" id="list1">
+                <div class="date">
+                    <h3 class="date_title">1</h3>
+                    <h6 class="date_name">Пт</h6>
+                </div>
+                <h4 class="event_status">Мероприятий нет</h4>
+                <h5 class="time1" id="time1">10:00-11:00</h5>
+                <h5 class="time2" id="time2">12:30-14:00</h5>
+                <h5 class="time3" id="time3">15:10-17:20</h5>
                 </li>
                 <li class="list">
                     <div class="date">
@@ -127,28 +159,55 @@
                     <img class="event_icon" src="img/event.png"/>
                     <h4>Выберите из списка:</h4>
                     <ul>
-                        <li class="menu">
-                          <a class="abovelist" href="#">Мероприятие..</a>
-                          <ul class="menu-content">
-                              <li><a class="list_item" href="#">День рождение</a></li>
-                              <li><a class="list_item" href="#">Лялляляля</a></li>
-                              <li><a class="list_item" href="#">Ядерная бомба</a></li>
-                              <li><a class="list_item" href="#">Дедовский праздник (Аню не пускать)</a></li>
-                          </ul>
+                        <li class="menu" id="menu_event">
+                            <a class="abovelist" id="event">Мероприятие</a>
+                            <ul class="menu-content">
+                                <li><a class="list_item">Праздник</a></li>
+                                <li><a class="list_item">Корпоратив</a></li>
+                                <li><a class="list_item">Найм сотрудников</a></li>
+                                <li><a class="list_item">Дедовский праздник (Аню не пускать)</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
                 <div class="row_left">
                     <img class="time_icon" src="img/time.png"/>
-                    <h4>Выберите время мероприятия: </h4>
+                    <h4>Выберите время: </h4>
+                    <ul>
+                        <li class="menu" id="menu_time">
+                            <a class="abovelist" id="time">Время</a>
+                            <ul class="menu-content" id="timeList">
+                                <li><a data-time="time1" class="list_item">10:00-11:00</a></li>
+                                <li><a data-time="time2" class="list_item">12:00-14:30</a></li>
+                                <li><a data-time="time3" class="list_item">15:10-17:20</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
                 <div class="row_left">
                     <img class="person_icon" src="img/person.png"/>
-                    <h4>Выберите бойца: </h4>
+                    <h4>Выберите работника: </h4>
+                    <ul>
+                        <li class="menu" id="menu_employee">
+                            <a class="abovelist" id="employee">Работник</a>
+                            <ul class="menu-content">
+                                <li><a class="list_item">Жуков Максим Ярославович</a></li>
+                                <li><a class="list_item">Макарова Алёна Леонидовна</a></li>
+                                <li><a class="list_item">Дегтярева Александра Евгеньевна</a></li>
+                                <li><a class="list_item">Александров Вячеслав Матвеевич</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                <div class="row_right">
-                    <button id="dialog_button" class="dialog_button">OK</button>
+            </li>
+        </ul>
+                <div class="row_center">
+                    <button id="okd_button" class="okd_button">OK</button>
+                    <button id="canceld_button" class="canceld_button">Наташа отмена</button>
                 </div>
             </dialog>
-    </div>
-</body>
+        </ul>
+        </div>
+    <script src="script.js"></script>
+    </body>
+</html>

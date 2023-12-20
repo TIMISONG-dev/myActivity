@@ -10,23 +10,21 @@
 <body>
     <div class="login">
         <h1>Вход</h1>
-        <form action="">
+  
             <div class="input">
-                <input type="text" placeholder="Логин" required>
+                <input type="text" placeholder="Логин" class="Login" required>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input">
-                <input type="text" placeholder="Пароль" required>
+                <input type="password" placeholder="Пароль" class="password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
-            <div class="remember_forgot">
-                <label for=""><input type="checkbox">Запомнить</label>
-            </div>
-            <button type="submit" href="../index.html" class="btn">Войти</button>
+            <button type="button" class="LogButton">Войти</button>
             <div class="register">
-                <a href="registration.html">Зарегестрироваться</a>
+                <a class="RegBtn">Зарегистрироваться</a>
             </div>
-        </form>
+
     </div>
+    <script src="login.js"></script>
 </body>
 </html>

@@ -8,22 +8,26 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+
     <div class="login">
         <h1>Регистрация</h1>
-        <form action="">
+     
             <div class="input">
-                <input type="text" placeholder="Логин" required>
+                <input type="text" placeholder="Логин" class="loginn" required>
                 <i class='bx bxs-user'></i>
             </div>
+
             <div class="input">
-                <input type="text" placeholder="Пароль" required>
+                <input type="password" placeholder="Пароль"  class="password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
-            <button type="submit" href="../index.html" class="btn">Зарегестрироваться</button>
+
+            <button type="button" class="RegBtn">Зарегистрироваться</button>
             <div class="register">
-                <a href="login.html">Уже есть аккаунт?</a>
+                <a class="LogBtn">Уже есть аккаунт?</a>
             </div>
-        </form>
+       
     </div>
+    <script src="reg.js"></script>
 </body>
 </html>

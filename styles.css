@@ -13,9 +13,34 @@ body {
 }
 .main {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-top: 150px;
+}
+.date-list {
+    display: flex;
+    flex-direction: column;
+}
+.event-plan {
+    position: relative;
+}
+.box {
+    top: 0;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.096);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 30px;
+    color: white;
+}
+.event_title {
+    padding-right: 5px;
+}
+.event_time {
+    padding-right: 20px;
 }
 .bien-glass {
     position: absolute;
@@ -92,7 +117,6 @@ body {
     height: 30px;
     padding: 20px;
     filter: blur(0);
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.096);
 }
 .event_icon {
     filter: blur(0);
@@ -182,14 +206,44 @@ body {
     align-items: center;
     text-shadow: 0 0 5px #000000;
 }
+.time1 {
+    color: rgba(255, 255, 255, 0.603);
+    margin: 0px 0px 0px 10px;
+    padding-top: 1px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px #000000;
+}
+.time2 {
+    color: rgba(255, 255, 255, 0.603);
+    margin: 0px 0px 0px 10px;
+    padding-top: 1px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px #000000;
+}
+.time3 {
+    color: rgba(255, 255, 255, 0.603);
+    margin: 0px 0px 0px 10px;
+    padding-top: 1px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px #000000;
+}
 #dialog {
     background: transparent;
     backdrop-filter: blur(20px);
-    border-radius: 10px;
+    border-radius: 30px;
     color: white;
     width: 450px;
     height: 350px;
-    border: 1px transparent;
+    border: 2px solid rgba(255, 255, 255, 0.4);
 }
 .row {
     display: flex;
@@ -203,6 +257,21 @@ body {
     text-align: center;
 }
 .row_right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    text-align: center;
+}
+.row_right_nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    filter:blur(0);
+    margin-left:1100px;
+}
+.row_center {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -252,6 +321,7 @@ ul {
     width: 200px;
 }
 .menu-content a {
+    position: relative;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -264,14 +334,75 @@ ul {
     display: flex;
     flex-direction: column;
 }
+.menu-content-left {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    flex-direction: column;
+}
+.menu-content-left a {
+    position: relative;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: left;
+}
+.menu-content-left a:hover {
+    color: white;
+}
+.menu:hover .menu-content-left {
+    display: flex;
+    flex-direction: column;
+}
 .dialog_title {
     padding-right: 20px;
 }
-.dialog_button {
+.okd_button {
     background-color: white;
     border-radius: 100px;
     color: black;
     padding: 10px;
+    margin: 10px;
     width: 100px;
     border: 1px white;
+}
+.canceld_button {
+    background-color: rgb(117, 7, 7);
+    border-radius: 100px;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+    border: 1px rgb(110, 13, 13);
+}
+.ban {
+    filter: blur(0);
+}
+.LogOutBtn{
+    color: black;
+    padding: 10px;
+    width: 100px;
+    filter: blur(0);
+}
+.UserInfo{
+    font-family: 'GoogleSans'; 
+	src: url(fonts/GoogleSansText-Regular.ttf); 
+    filter: blur(0);
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 0 5px #000000;
+}
+.chatBtn .LogOutBtn {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+.chatBtn:hover  .LogOutBtn:hover {
+    background-color: #234f92;
 }
