@@ -121,11 +121,11 @@
             <dialog id="dialog">
                 <div class="row">
                     <img class="list_icon" src="img/list.png"/>
-                    <h2>Назначить мероприятие?</h2>
+                    <h2 class="dialog_title">Назначить мероприятие?</h2>
                 </div>
                 <div class="row_left">
                     <img class="event_icon" src="img/event.png"/>
-                    <h3>Выберите из списка:</h3>
+                    <h4>Выберите из списка:</h4>
                     <ul>
                         <li class="menu">
                           <a class="abovelist" href="#">Мероприятие..</a>
@@ -138,7 +138,17 @@
                         </li>
                     </ul>
                 </div>
-                <button id="ok">OK</button>
+                <div class="row_left">
+                    <img class="time_icon" src="img/time.png"/>
+                    <h4>Выберите время мероприятия: </h4>
+                </div>
+                <div class="row_left">
+                    <img class="person_icon" src="img/person.png"/>
+                    <h4>Выберите бойца: </h4>
+                </div>
+                <div class="row_right">
+                    <button id="dialog_button" class="dialog_button">OK</button>
+                </div>
             </dialog>
     </div>
 </body>

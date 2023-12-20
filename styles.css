@@ -100,6 +100,18 @@ body {
     height: 25px;
     padding: 20px;
 }
+.time_icon {
+    filter: blur(0);
+    width: 25px;
+    height: 25px;
+    padding: 20px;
+}
+.person_icon {
+    filter: blur(0);
+    width: 25px;
+    height: 25px;
+    padding: 20px;
+}
 .title {
     z-index: 2;
     filter: blur(0);
@@ -174,9 +186,10 @@ body {
     background: transparent;
     backdrop-filter: blur(20px);
     border-radius: 10px;
-    width: 500px;
-    height: 500px;
     color: white;
+    width: 450px;
+    height: 350px;
+    border: 1px transparent;
 }
 .row {
     display: flex;
@@ -187,6 +200,13 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: left;
+    text-align: center;
+}
+.row_right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 ul {
@@ -203,24 +223,22 @@ ul {
     text-decoration: none;
 }
 .list_item:hover {
-    background-color: #78e487;
-    color:black;
+    background-color: #234f92;
 }
 .abovelist {
     display: block;
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 10px;
-    margin-top: 3px;
+    margin-top: 2px;
     text-decoration: none;
     background: none;
 }
 .abovelist:hover {
-    background-color: #78e487;
+    background-color: #234f92;
     border-radius: 10px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    color:black;
 }
 .menu-content {
     display: none;
@@ -239,12 +257,21 @@ ul {
     text-decoration: none;
     text-align: left;
 }
+.menu-content a:hover {
+    color: white;
+}
 .menu:hover .menu-content {
     display: flex;
     flex-direction: column;
 }
-#ok {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.dialog_title {
+    padding-right: 20px;
+}
+.dialog_button {
+    background-color: white;
+    border-radius: 100px;
+    color: black;
+    padding: 10px;
+    width: 100px;
+    border: 1px white;
 }
