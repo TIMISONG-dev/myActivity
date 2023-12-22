@@ -25,7 +25,6 @@ body {
 .event-plan {
     display: flex;
     flex-direction: column;
-    margin-bottom: 750px;
 }
 #box-plan {
     display: none;

@@ -156,3 +156,51 @@ document.getElementById('timeList').addEventListener('click', (event) => {
     }
   }
 });
+
+var dateList = document.querySelector('.date-list');
+var list1 = document.querySelector('.list'); // используйте класс вместо id
+
+var n = 7;
+
+for (var i = 0; i < n; i++) {
+    var newList = list1.cloneNode(true);
+    // ID
+    newList.id = 'list' + (i + 2);
+    // Date
+    var dateTitle = newList.querySelector('.date_title');
+    var dateName = newList.querySelector('.date_name');
+    dateTitle.textContent = i + 2;
+
+    d = i + 2;
+
+    if (d === 1){
+      dateName.textContent = "Пт"
+    } else {
+      if (d === 2){
+        dateName.textContent = "Сб"
+      } else {
+        if (d === 3){
+          dateName.textContent = "Вс"
+        } else {
+          if (d === 4){
+            dateName.textContent = "Пн"
+          } else {
+            if (d === 5){
+              dateName.textContent = "Вт"
+            } else {
+              if (d === 6){
+                dateName.textContent = "Ср"
+              } else {
+                if (d === 7){
+                  dateName.textContent = "Чт"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // Move to container
+    dateList.appendChild(newList);
+}
+
