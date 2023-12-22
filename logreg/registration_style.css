@@ -93,3 +93,7 @@ body{
     color: #a5c0fb;
     transition: .4s color ease;
 }
+
+.LogBtn{
+    cursor: pointer;
+}

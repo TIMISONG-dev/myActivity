@@ -102,17 +102,23 @@ body {
 }
 .toolbar {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between; /* Используйте space-between для размещения элементов справа */
     background-color: #0000007c;
     z-index: 1;
     position: fixed;
-    top: auto;
+    top: 0; /* Используйте 0, чтобы прикрепить панель инструментов к верху */
     padding: 20px;
-    left: 0;
-    right: 0;
+    width: 100%; /* Занимайте всю ширину */
+    box-sizing: border-box; /* Учтите padding в расчетах ширины */
 }
+
+.title_and_icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .list_icon {
     filter: blur(0);
     width: 30px;
@@ -124,6 +130,7 @@ body {
     height: 30px;
     padding: 20px;
     filter: blur(0);
+    cursor:pointer;
 }
 .event_icon {
     filter: blur(0);
@@ -272,11 +279,10 @@ body {
 }
 .row_right_nav {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
+    gap: 10px;
     filter:blur(0);
-    margin-left:1100px;
+    padding-right: 30px;
+    align-items: center;
 }
 .row_center {
     display: flex;
@@ -293,13 +299,15 @@ ul {
 }
 .list_item {
     display: block;
-    color: rgb(255, 255, 255);
+    color: black;
     text-align: center;
     padding: 10px;
     text-decoration: none;
+    cursor:pointer;
 }
 .list_item:hover {
-    background-color: #234f92;
+    background: #a5c0fb;
+    transition: .1s background ease;
 }
 .abovelist {
     display: block;
@@ -309,9 +317,12 @@ ul {
     margin-top: 2px;
     text-decoration: none;
     background: none;
+    cursor: pointer;
 }
 .abovelist:hover {
-    background-color: #234f92;
+    background: #a5c0fb;
+    transition: .2s background ease;
+    color: #000000;
     border-radius: 10px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -335,7 +346,7 @@ ul {
     text-align: left;
 }
 .menu-content a:hover {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .menu:hover .menu-content {
     display: flex;
@@ -358,9 +369,7 @@ ul {
     text-decoration: none;
     text-align: left;
 }
-.menu-content-left a:hover {
-    color: white;
-}
+
 .menu:hover .menu-content-left {
     display: flex;
     flex-direction: column;
@@ -378,6 +387,7 @@ ul {
     border: 1px white;
     font-family: 'GoogleSans'; 
 	src: url(fonts/GoogleSansText-Regular.ttf); 
+    cursor: pointer;
 }
 .canceld_button {
     background-color: #234f92;
@@ -389,6 +399,7 @@ ul {
     border: 1px rgb(20, 28, 148);
     font-family: 'GoogleSans'; 
 	src: url(fonts/GoogleSansText-Regular.ttf); 
+    cursor:pointer;
 }
 .ban {
     filter: blur(0);
@@ -406,14 +417,4 @@ ul {
     font-size: 20px;
     color: white;
     text-shadow: 0 0 5px #000000;
-}
-.chatBtn .LogOutBtn {
-    display: block;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-}
-.chatBtn:hover  .LogOutBtn:hover {
-    background-color: #234f92;
 }

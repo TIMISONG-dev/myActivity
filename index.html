@@ -5,16 +5,18 @@
     <link rel="stylesheet" href="styles.css">
 
     <body>
-    <nav class="toolbar">
+    <div class="toolbar">
         <div class="bien-glass"></div>
         <div class="bien-glass-edge"></div>
-        <img class="list_icon" src="img/list.png"/>
-        <h2 class="title">Мои Активности</h2>
+        <div class="title_and_icon">
+            <img class="list_icon" src="img/list.png"/>
+            <h2 class="title">Мои Активности</h2>
+        </div>
         <div class="row_right_nav">
             <p id="userInfo" class="UserInfo"></p>
             <ul>
                 <li class="menu">
-                  <a class="abovelist" href="#"><img class="account_icon" src="img/account.png"/></a>
+                  <a class="abovelist"><img class="account_icon" src="img/account.png"/></a>
                   <ul class="menu-content-left">
                         <li><a class="list_item" id="ChatBtn">Сообщения</a></li>
                         <li><a class="list_item" id="LogOutBtn">Выйти</a></li>
@@ -22,7 +24,7 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </div>
     
     <div class="main">
         <div class="event-plan">

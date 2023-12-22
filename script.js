@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Обновление первого списка
     if (userEvents['event']) {
       eventAboveList.textContent = userEvents['event'];
-      document.querySelector('.event_title').textContent = userEvents['event'];
-      document.querySelector('.event_status').textContent = "Есть мероприятие";
+      document.querySelector('.event_name').textContent = userEvents['event'];
+      // document.querySelector('.event_status').textContent = "Есть мероприятие";
       box_plan.style.display = 'block';
     }
 
@@ -65,51 +65,111 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const list = document.getElementById('list1');
   var dialog = document.getElementById("dialog");
   var okd_button = document.getElementById("okd_button");
   var canceld_button = document.getElementById("canceld_button");
   var box_plan = document.getElementById('box-plan');
+  var dateList = document.querySelector('.date-list');
+  var list1 = document.querySelector('.list');
 
-  // Навешиваем обработчик на событие клик
-  list.addEventListener('click', function () {
-    dialog.showModal();
-  });
+  var n = 7;
 
-  // Добавляем обработчик события для кнопки "Ок"
-  okd_button.addEventListener("click", function () {
-    // Получаем выбранное мероприятие и время
-    var selectedEvent = document.getElementById('event').textContent;
-    var selectedTime = document.getElementById('time').textContent;
-    var selectedEmp = document.getElementById('employee').textContent;
-    if (selectedEvent == "Мероприятие"){
-      alert('Введите значения для мероприятия');
-    } else {
-      if (selectedTime == "Время"){
-        alert('Введите значения для времени');
+  for (var i = 0; i < n; i++) {
+      var newList = list1.cloneNode(true);
+      // ID
+      newList.id = 'list' + (i + 2);
+      // Date
+      var dateTitle = newList.querySelector('.date_title');
+      var dateName = newList.querySelector('.date_name');
+      dateTitle.textContent = i + 2;
+
+      d = i + 2;
+
+      if (d === 1){
+        dateName.textContent = "Пт"
       } else {
-        if (selectedEmp == "Работник"){
-          alert('Введите значения для работника');
+        if (d === 2){
+          dateName.textContent = "Сб"
         } else {
-                // Обновляем текст в элементах
-                document.querySelector('.event_name').textContent = selectedEvent;
-                document.querySelector('.event_time').textContent = selectedTime;
-                document.querySelector('.event_emp').textContent = selectedEmp;
-                document.querySelector('.event_status').textContent = "Есть мероприятие";
-                box_plan.style.display = 'block';
-
-                // Закрываем диалоговое окно
-                dialog.close();
-                alert('Создано мероприятие');
+          if (d === 3){
+            dateName.textContent = "Вс"
+          } else {
+            if (d === 4){
+              dateName.textContent = "Пн"
+            } else {
+              if (d === 5){
+                dateName.textContent = "Вт"
+              } else {
+                if (d === 6){
+                  dateName.textContent = "Ср"
+                } else {
+                  if (d === 7){
+                    dateName.textContent = "Чт"
+                  }
+                }
+              }
+            }
+          }
         }
       }
-    }
-  });
+      // Move to container
+      dateList.appendChild(newList);
+  }
 
+  var listItems = document.querySelectorAll('.date-list .list');
+
+  listItems.forEach(function (listItem) {
+      listItem.addEventListener('click', function () {
+          // Добавляем класс к элементу списка, который был кликнут
+          listItems.forEach(function (item) {
+              item.classList.remove('clicked');
+          });
+          listItem.classList.add('clicked');
+  
+          dialog.showModal();
+      });
+  });
+  
+  // Обработчик "Ok" вне цикла
+  okd_button.addEventListener("click", function () {
+      var clickedListItem = document.querySelector('.date-list .list.clicked');
+      if (!clickedListItem) {
+          alert('Выберите элемент списка!');
+          return;
+      }
+  
+      // Получаем выбранное мероприятие и время
+      var selectedEvent = document.getElementById('event').textContent;
+      var selectedTime = document.getElementById('time').textContent;
+      var selectedEmp = document.getElementById('employee').textContent;
+  
+      if (selectedEvent == "Мероприятие") {
+          alert('Введите значения для мероприятия');
+      } else {
+          if (selectedTime == "Время") {
+              alert('Введите значения для времени');
+          } else {
+              if (selectedEmp == "Работник") {
+                  alert('Введите значения для работника');
+              } else {
+                  document.querySelector('.event_name').textContent = selectedEvent;
+                  document.querySelector('.event_time').textContent = selectedTime;
+                  document.querySelector('.event_emp').textContent = selectedEmp;
+                  box_plan.style.display = 'block';
+                  var eventStatus = clickedListItem.querySelector('.event_status');
+                  eventStatus.textContent = "Есть бля";
+  
+                  dialog.close();
+              }
+          }
+      }
+  });
+  
   // Кнопка отмены
   canceld_button.addEventListener("click", function(){
     dialog.close();
   });
+
 });
 
 let logOutBtn = document.getElementById('LogOutBtn');
@@ -156,51 +216,3 @@ document.getElementById('timeList').addEventListener('click', (event) => {
     }
   }
 });
-
-var dateList = document.querySelector('.date-list');
-var list1 = document.querySelector('.list'); // используйте класс вместо id
-
-var n = 7;
-
-for (var i = 0; i < n; i++) {
-    var newList = list1.cloneNode(true);
-    // ID
-    newList.id = 'list' + (i + 2);
-    // Date
-    var dateTitle = newList.querySelector('.date_title');
-    var dateName = newList.querySelector('.date_name');
-    dateTitle.textContent = i + 2;
-
-    d = i + 2;
-
-    if (d === 1){
-      dateName.textContent = "Пт"
-    } else {
-      if (d === 2){
-        dateName.textContent = "Сб"
-      } else {
-        if (d === 3){
-          dateName.textContent = "Вс"
-        } else {
-          if (d === 4){
-            dateName.textContent = "Пн"
-          } else {
-            if (d === 5){
-              dateName.textContent = "Вт"
-            } else {
-              if (d === 6){
-                dateName.textContent = "Ср"
-              } else {
-                if (d === 7){
-                  dateName.textContent = "Чт"
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    // Move to container
-    dateList.appendChild(newList);
-}
-
