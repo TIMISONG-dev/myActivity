@@ -11,7 +11,6 @@ body {
     margin: 0;
     background-position: center;
 }
-
 .main {
     display: flex;
     position: relative; /* Added position relative */
@@ -20,20 +19,14 @@ body {
     justify-content: center;
     margin-top: 150px;
 }
-
-
 .date-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-#box-plan {
-    display: none;
-}
 .box {
-    position: absolute; /* Changed position to absolute */
+    position: relative; /* Changed position to absolute */
     left: 0; /* Adjust the left position as needed */
     top: 0;
     background: transparent;
@@ -44,11 +37,48 @@ body {
     margin: 10px;
     border-radius: 30px;
     color: white;
+    display: none;
 }
-.event_title {
+.event_title1 {
     padding-right: 5px;
 }
-.event_time {
+.event_title2 {
+    padding-right: 5px;
+}
+.event_title3 {
+    padding-right: 5px;
+}
+.event_title4 {
+    padding-right: 5px;
+}
+.event_title5 {
+    padding-right: 5px;
+}
+.event_title6 {
+    padding-right: 5px;
+}
+.event_title7 {
+    padding-right: 5px;
+}
+.event_time1 {
+    padding-right: 20px;
+}
+.event_time2 {
+    padding-right: 20px;
+}
+.event_time3 {
+    padding-right: 20px;
+}
+.event_time4 {
+    padding-right: 20px;
+}
+.event_time5 {
+    padding-right: 20px;
+}
+.event_time6 {
+    padding-right: 20px;
+}
+.event_time7 {
     padding-right: 20px;
 }
 .event_emp {
@@ -117,13 +147,11 @@ body {
     width: 100%; /* Занимайте всю ширину */
     box-sizing: border-box; /* Учтите padding в расчетах ширины */
 }
-
 .title_and_icon {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 .list_icon {
     filter: blur(0);
     width: 30px;
@@ -255,7 +283,50 @@ body {
     align-items: center;
     text-shadow: 0 0 5px #000000;
 }
-#dialog {
+.time4 {
+    color: rgba(255, 255, 255, 0.603);
+    margin: 0px 0px 0px 10px;
+    padding-top: 1px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px #000000;
+}
+
+.time5 {
+    color: rgba(255, 255, 255, 0.603);
+    margin: 0px 0px 0px 10px;
+    padding-top: 1px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px #000000;
+}
+
+.time6 {
+    color: rgba(255, 255, 255, 0.603);
+    margin: 0px 0px 0px 10px;
+    padding-top: 1px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px #000000;
+}
+
+.time7 {
+    color: rgba(255, 255, 255, 0.603);
+    margin: 0px 0px 0px 10px;
+    padding-top: 1px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px #000000;
+}
+#dialog{
     background: transparent;
     backdrop-filter: blur(20px);
     border-radius: 30px;
