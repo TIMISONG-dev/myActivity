@@ -141,10 +141,17 @@ body{
 }
 
 .overlay {
+    
     background-color: rgba(0, 0, 0, 0.5); /* черный цвет с прозрачностью */
-    padding: 100px;
+    padding: 80px;
     text-align: center;
     margin-top: 300px;
+
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    border-radius: 30px;
 }
 
 .overlay-text {

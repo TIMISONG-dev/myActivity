@@ -11,25 +11,30 @@ body {
     margin: 0;
     background-position: center;
 }
+
 .main {
     display: flex;
+    position: relative; /* Added position relative */
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-top: 150px;
 }
+
+
 .date-list {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.event-plan {
-    display: flex;
-    flex-direction: column;
-}
+
 #box-plan {
     display: none;
 }
 .box {
+    position: absolute; /* Changed position to absolute */
+    left: 0; /* Adjust the left position as needed */
     top: 0;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.4);
