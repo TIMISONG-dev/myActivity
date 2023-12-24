@@ -27,10 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var timeAboveList = timeMenu.querySelector('.abovelist');
   handleList(timeMenu, timeAboveList, 'time_');
 
-  var employeeMenu = document.getElementById('menu_employee');
-  var employeeAboveList = employeeMenu.querySelector('.abovelist');
-  handleList(employeeMenu, employeeAboveList, 'employee_');
-
   var currentUser = localStorage.getItem('currentUser');
   if (currentUser) {
     var userEvents = JSON.parse(localStorage.getItem(currentUser)) || {};
@@ -131,43 +127,6 @@ document.addEventListener('DOMContentLoaded', function () {
       box_plan7.style.display = 'block';
     }
 
-    // Employers
-
-    if (userEvents['emp_list1']) {
-      eventAboveList.textContent = userEvents['emp_list1'];
-      document.querySelector('.event_emp1').textContent = userEvents['emp_list1'];
-    }
-
-    if (userEvents['emp_list2']) {
-      eventAboveList.textContent = userEvents['emp_list2'];
-      document.querySelector('.event_emp2').textContent = userEvents['emp_list2'];
-    }
-
-    if (userEvents['emp_list3']) {
-      eventAboveList.textContent = userEvents['emp_list3'];
-      document.querySelector('.event_emp3').textContent = userEvents['emp_list3'];
-    }
-
-    if (userEvents['emp_list4']) {
-      eventAboveList.textContent = userEvents['emp_list4'];
-      document.querySelector('.event_emp4').textContent = userEvents['emp_list4'];
-    }
-
-    if (userEvents['emp_list5']) {
-      eventAboveList.textContent = userEvents['emp_list5'];
-      document.querySelector('.event_emp5').textContent = userEvents['emp_list5'];
-    }
-
-    if (userEvents['emp_list6']) {
-      eventAboveList.textContent = userEvents['emp_list6'];
-      document.querySelector('.event_emp6').textContent = userEvents['emp_list6'];
-    }
-
-    if (userEvents['emp_list7']) {
-      eventAboveList.textContent = userEvents['emp_list7'];
-      document.querySelector('.event_emp7').textContent = userEvents['emp_list7'];
-    }
-
     // Times
 
     if (userEvents['time_list1']) {
@@ -250,22 +209,18 @@ document.addEventListener('DOMContentLoaded', function () {
   okButton.addEventListener("click", function () {
     var selectedEvent = document.getElementById('event').textContent;
     var selectedTime = document.getElementById('time').textContent;
-    var selectedEmp = document.getElementById('employee').textContent;
 
     var eventStatusId = 'event_status' + selectedListId.slice(-1);
     var eventTitleId = 'event_name' + selectedListId.slice(-1);
     var timeId = 'event_time' + selectedListId.slice(-1);
-    var eventEmpId = 'event_emp' + selectedListId.slice(-1);
 
     var eventKey = 'event_' + selectedListId;
     var timeKey = 'time_' + selectedListId;
     var eventTitle = 'plan_' + selectedListId;
-    var eventEmp = 'emp_' + selectedListId;
 
     document.querySelector('.' + eventStatusId).textContent = "Есть мероприятие";
     document.querySelector('.' + eventTitleId).textContent = selectedEvent;
     document.querySelector('.' + timeId).textContent = selectedTime;
-    document.querySelector('.' + eventEmpId).textContent = selectedEmp;
 
 
     var currentUser = localStorage.getItem('currentUser');
@@ -274,7 +229,6 @@ document.addEventListener('DOMContentLoaded', function () {
       userEvents[eventKey] = "Есть мероприятие";
       userEvents[timeKey] = selectedTime;
       userEvents[eventTitle] = selectedEvent;
-      userEvents[eventEmp] = selectedEmp;
 
       var box_plan1 = document.getElementById('box-plan1');
       var box_plan2 = document.getElementById('box-plan2');
@@ -344,24 +298,12 @@ let logOutBtn = document.getElementById('LogOutBtn');
 
 document.addEventListener('DOMContentLoaded', () => {
   const currentUserLogin = localStorage.getItem('currentUser');
-  const isAdmin = localStorage.getItem('isAdmin') === 'true';
-
-  if (isAdmin) {
-    const userInfoElement = document.getElementById('userInfo');
-    userInfoElement.innerHTML = 'Moderator';
-  } else {
-    const userInfoElement = document.getElementById('userInfo');
-    userInfoElement.innerHTML = `${currentUserLogin}`;
-  }
-
-  //сonst adminButton = document.getElementById('adminButtons');
-  //if(isAdmin){
-  //  adminButton.style.display = block;
-  //}
+  const userInfoElement = document.getElementById('userInfo');
+  userInfoElement.innerHTML = `${currentUserLogin}`;
+  
 });
 
 logOutBtn.addEventListener('click', () => {
   localStorage.removeItem('currentUser');
-  localStorage.removeItem('isAdmin');
   window.location.href = 'logreg/login.html';
 });

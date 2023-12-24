@@ -13,18 +13,29 @@ body {
 }
 .main {
     display: flex;
-    position: relative; /* Added position relative */
+    position: relative;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start; /* Выравнивание элементов в начало поперечной оси */
+    justify-content: space-between;
     margin-top: 150px;
 }
+
+.event-plan {
+    display: flex;
+    flex-wrap: wrap; /* Разрешить панелям переноситься на следующую строку */
+    justify-content: flex-start; /* Выравнивание панелей в начало главной оси */
+    width: 1000px; /* Задать максимальную ширину контейнера с панелями */
+}
+
 .date-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: right;
+
+    margin-left: 20px;
 }
+
 .box {
     position: relative; /* Changed position to absolute */
     left: 0; /* Adjust the left position as needed */
@@ -33,11 +44,14 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(20px);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.096);
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
     border-radius: 30px;
     color: white;
     display: none;
+
+    flex: 0 0 calc(33.33% - 20px); /* Регулировка ширины для 3 панелей в строке с отступами */
+    margin: 10px;
 }
 .event_title1 {
     padding-right: 5px;
