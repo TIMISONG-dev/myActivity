@@ -72,7 +72,7 @@ body{
     align-items: center;
     justify-content: space-between; /* Используйте space-between для размещения элементов справа */
     background-color: #0000007c;
-    z-index: 1;
+    z-index: 6;
     position: fixed;
     top: 0; /* Используйте 0, чтобы прикрепить панель инструментов к верху */
     padding: 20px;
@@ -140,38 +140,157 @@ body{
     gap: 10px;
 }
 
-.overlay {
-    
-    background-color: rgba(0, 0, 0, 0.5); /* черный цвет с прозрачностью */
-    padding: 80px;
-    text-align: center;
-    margin-top: 300px;
 
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(20px);
-    color: #fff;
-    border-radius: 30px;
-}
 
-.overlay-text {
-    color: #ffffff; /* белый цвет текста */
-    font-size:30px
-}
 
-.overlay-button {
-    background-color: white;
+.overlay-button2 {
+    position: absolute;
+    background-color: #a5c0fb;
     border-radius: 100px;
-    color: black;
+    color: white;
     padding: 10px;
     width: 280px;
     border: 1px white;
     cursor: pointer;
     font-size: 30px;
+    left: 50%;
+    top: 20%; /* Уменьшено значение top */
+    transform: translate(-50%, -50%);
+}
+
+.overlay-button1 {
+    position: absolute;
+    background-color: #a5c0fb;
+    border-radius: 100px;
+    color: white;
+    padding: 10px;
+    width: 280px;
+    border: 1px white;
+    cursor: pointer;
+    font-size: 30px;
+    left: 26%;
+    top: 38%; 
+    transform: translate(-50%, -50%);
+}
+
+.overlay-button2:hover {
+    background: #65769a;
+    color:white;
+    transition: 0.4s background ease;
+}
+
+.overlay-button1:hover {
+    background: #65769a;
+    color:white;
+    transition: 0.4s background ease;
+}
+
+.swiper {
+    width: 1000px;
+    height: 100%;
+    background: transparent;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 150px;
+    position: relative; /* Добавлено для корректного позиционирования кнопки и текста */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 90%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+.slide-text2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    top: 59%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0000007c;
+    color: #fff;
+    padding: 50px;
+    width: 80%;
+
+    border-bottom-left-radius: 20px; /* Закругление только нижнего левого угла */
+    border-bottom-right-radius: 20px; /* Закругление только нижнего правого угла */
+}
+
+
+.slide-text1 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    top: 20%; 
+    left: 25.92%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: #0000007c;
+    padding: 90px;
+    width: 20%;
+
+    border-radius:  20px; /* Закругление только нижнего левого угла */
+    
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+    right:250px !important;
+    left:auto;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left:250px !important;
+    right:auto;
 
 }
 
-.overlay-button:hover{
-    background: #a5c0fb;
-    transition: .4s background ease;
+.info {
+    display: flex;
+    flex-direction: row;
+    background: blur;
+    border:solid white;
+
+    color: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    border-radius: 10px;
 }
+
+.telegram {
+    width: 30px;
+    height: 30px;
+}
+.vk {
+    padding-right: 100px;
+    width: 30px;
+    height: 30px;
+}
+.phone {
+    padding-left: 100px;
+    width: 30px;
+    height: 30px;
+}
+.map {
+    padding: 14px 0px 14px 14px;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+

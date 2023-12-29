@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (foundUser.isExecutor) {
                     window.location.href = '../worker.html'; // Исполнитель
                 } else if (foundUser.isCustomer) {
-                    window.location.href = '../index.html'; // Заказчик
+                    window.location.href = '../main.html'; // Заказчик
                 } else {
                     console.log('Не указан тип пользователя для:', enteredLogin);
                     alert('Ошибка при определении типа пользователя');

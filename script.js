@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (currentUser) {
           var userEvents = JSON.parse(localStorage.getItem(currentUser)) || {};
           userEvents[keyPrefix + selectedListId] = selectedItemText;
+          
+          // Новые ключи для isCustomer и currentUser
+          userEvents['isCustomer'] = true;  // Предполагается, что это клиент
+          userEvents['currentUser'] = currentUser;
+
           localStorage.setItem(currentUser, JSON.stringify(userEvents));
         }
       });
@@ -163,35 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
       timeAboveList.textContent = userEvents['time_list7'];
       document.querySelector('.event_time7').textContent = userEvents['time_list7'];
     }
-
-    if (userEvents['employee_list1']) {
-      employeeAboveList.textContent = userEvents['employee_list1'];
-    }
-
-    if (userEvents['employee_list2']) {
-      employeeAboveList.textContent = userEvents['employee_list2'];
-    }
-
-    if (userEvents['employee_list3']) {
-      employeeAboveList.textContent = userEvents['employee_list3'];
-    }
-
-    if (userEvents['employee_list4']) {
-      employeeAboveList.textContent = userEvents['employee_list4'];
-    }
-
-    if (userEvents['employee_list5']) {
-      employeeAboveList.textContent = userEvents['employee_list5'];
-    }
-
-    if (userEvents['employee_list6']) {
-      employeeAboveList.textContent = userEvents['employee_list6'];
-    }
-
-    if (userEvents['employee_list7']) {
-      employeeAboveList.textContent = userEvents['employee_list7'];
-    }
-  }
+  }  
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -304,6 +281,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 logOutBtn.addEventListener('click', () => {
+  // Удаление как currentUser, так и isCustomer при выходе
   localStorage.removeItem('currentUser');
+  localStorage.removeItem('isCustomer');
   window.location.href = 'logreg/login.html';
 });

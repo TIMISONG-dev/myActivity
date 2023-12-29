@@ -91,6 +91,7 @@ body {
     padding: 20px;
     filter: blur(0);
     cursor:pointer;
+    margin-right: 20px;
 }
 .event_icon {
     filter: blur(0);
@@ -223,6 +224,17 @@ ul {
     border-radius: 30px;
     color: white;
 }
+
+.box.visible {
+    display: block;
+    visibility: visible;
+}
+  
+.box:not(.visible) {
+    display: none;
+    visibility: hidden;
+}
+
 .event_title1 {
     padding-right: 5px;
 }
@@ -313,6 +325,12 @@ ul {
     color: black;
     margin: 10px;
     padding: 10px;
+    cursor: pointer;
+}
+
+.ok:hover{
+    background: #a5c0fb;
+    transition: .2s background ease;
 }
 .can {
     background: #234f92;
@@ -320,7 +338,14 @@ ul {
     color: rgb(255, 255, 255);
     margin: 10px;
     padding: 10px;
+    cursor: pointer;
 }
+
+.can:hover{
+    background: #1a3a6a;
+    transition: .2s background ease;
+}
+
 .UserInfo{
     font-family: 'GoogleSans'; 
 	src: url(fonts/GoogleSansText-Regular.ttf); 

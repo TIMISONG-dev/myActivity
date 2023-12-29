@@ -1,212 +1,72 @@
+
 <html>
-    <head>
-    <title>Активности</title>
-    </head>
-    <link rel="stylesheet" href="styles.css">
-    <body>
-    <div class="toolbar">
-        <div class="bien-glass"></div>
-        <div class="bien-glass-edge"></div>
-        <div class="title_and_icon">
-            <img class="list_icon" src="img/list.png"/>
-            <h2 class="title">Мои Активности</h2>
-        </div>
-        <div class="row_right_nav">
-            <p id="userInfo" class="UserInfo"></p>
-            <ul>
-                <li class="menu">
-                  <a class="abovelist"><img class="account_icon" src="img/account.png"/></a>
-                  <ul class="menu-content-left">
-                        <li><a class="list_item" id="LogOutBtn">Выйти</a></li>
-                  </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-    
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="img/list.png"/>
+    <title>Уберарт</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+<body>
     <div class="main">
-        <div class="event-plan">
-            <div class="box" id="box-plan1">
-                <div class="row_left">
-                    <img class="list_icon" src="img/list.png"/>
-                    <h3 class="event_title1">Понедельник в</h3>
-                    <h3 class="event_time1">0:00</h3>
-                </div>
-                <div class="row_left">
-                    <img class="event_icon" src="img/event.png"/>
-                    <h4 class="event_name1">День рождение</h4>
-                </div>
+        <div class="toolbar">
+            <div class="bien-glass"></div>
+            <div class="bien-glass-edge"></div>
+            <div class="title_and_icon">
+                <img class="list_icon" src="img/list.png"/>
+                <h2 class="title">Уберарт</h2>
             </div>
-            <div class="box" id="box-plan2">
-                <div class="row_left">
-                    <img class="list_icon" src="img/list.png"/>
-                    <h3 class="event_title2">Понедельник в</h3>
-                    <h3 class="event_time2">0:00</h3>
-                </div>
-                <div class="row_left">
-                    <img class="event_icon" src="img/event.png"/>
-                    <h4 class="event_name2">День рождение</h4>
-                </div>
-            </div>
-            <div class="box" id="box-plan3">
-                <div class="row_left">
-                    <img class="list_icon" src="img/list.png"/>
-                    <h3 class="event_title3">Понедельник в</h3>
-                    <h3 class="event_time3">0:00</h3>
-                </div>
-                <div class="row_left">
-                    <img class="event_icon" src="img/event.png"/>
-                    <h4 class="event_name3">День рождение</h4>
-                </div>
-            </div>
-            <div class="box" id="box-plan4">
-                <div class="row_left">
-                    <img class="list_icon" src="img/list.png"/>
-                    <h3 class="event_title4">Понедельник в</h3>
-                    <h3 class="event_time4">0:00</h3>
-                </div>
-                <div class="row_left">
-                    <img class="event_icon" src="img/event.png"/>
-                    <h4 class="event_name4">День рождение</h4>
-                </div>
-            </div>
-            <div class="box" id="box-plan5">
-                <div class="row_left">
-                    <img class="list_icon" src="img/list.png"/>
-                    <h3 class="event_title5">Понедельник в</h3>
-                    <h3 class="event_time5">0:00</h3>
-                </div>
-                <div class="row_left">
-                    <img class="event_icon" src="img/event.png"/>
-                    <h4 class="event_name5">День рождение</h4>
-                </div>
-            </div>
-            <div class="box" id="box-plan6">
-                <div class="row_left">
-                    <img class="list_icon" src="img/list.png"/>
-                    <h3 class="event_title6">Понедельник в</h3>
-                    <h3 class="event_time6">0:00</h3>
-                </div>
-                <div class="row_left">
-                    <img class="event_icon" src="img/event.png"/>
-                    <h4 class="event_name6">День рождение</h4>
-                </div>
-            </div>
-            <div class="box" id="box-plan7">
-                <div class="row_left">
-                    <img class="list_icon" src="img/list.png"/>
-                    <h3 class="event_title7">Понедельник в</h3>
-                    <h3 class="event_time7">0:00</h3>
-                </div>
-                <div class="row_left">
-                    <img class="event_icon" src="img/event.png"/>
-                    <h4 class="event_name7">День рождение</h4>
-                </div>
+            <div class="toolbar_buttons">
+                <button class="logBtn" id="logBtn">Войти</button>
+                <button class="regBtn" id="regBtn">Регистрация</button>
             </div>
         </div>
-        <ul class="date-list">
-            <li class="list" id="list1">
-                <div class="date">
-                    <h3 class="date_title">1</h3>
-                    <h6 class="date_name">Пт</h6>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <h1 class="slide-text1">Оставьте свой заказ одним кликом</h1>
+                    <img src="img/medium-shot-people-shaking-hands-at-work.jpg" class="img_1">
+                    <button class="overlay-button1">Оставить заказ</button>
                 </div>
-                <h4 class="event_status1" data-user-key="1">Мероприятий нет</h4>
-                <h5 class="time1">10:00-11:00 12:30-14:00 15:10-17:20</h5>
-            </li>
-            <li class="list" id="list2">
-                <div class="date">
-                    <h3 class="date_title">2</h3>
-                    <h6 class="date_name">Сб</h6>
+                <div class="swiper-slide">
+                    <img src="img/multiracial-group-of-coworkers-attracting-attention.jpg" class="img_2">
+                    <button class="overlay-button2">Взяться за заказ</button>
+                    <h1 class="slide-text2">Начни выполнять заказы прямо сейчас</h1>
                 </div>
-                <h4 class="event_status2" data-user-key="2">Мероприятий нет</h4>
-                <h5 class="time2">10:00-11:00 12:30-14:00 15:10-17:20</h5>
-                
-            </li>
-            <li class="list" id="list3">
-                <div class="date">
-                    <h3 class="date_title">3</h3>
-                    <h6 class="date_name">Вс</h6>
-                </div>
-                <h4 class="event_status3" data-user-key="3">Мероприятий нет</h4>
-                <h5 class="time3">10:00-11:00 12:30-14:00 15:10-17:20</h5>
-            </li>
-            <li class="list" id="list4">
-                <div class="date">
-                    <h3 class="date_title">4</h3>
-                    <h6 class="date_name">Пн</h6>
-                </div>
-                <h4 class="event_status4" data-user-key="4">Мероприятий нет</h4>
-                <h5 class="time4">10:00-11:00 12:30-14:00 15:10-17:20</h5>
-            </li>
-            <li class="list" id="list5">
-                <div class="date">
-                    <h3 class="date_title">5</h3>
-                    <h6 class="date_name">Вт</h6>
-                </div>
-                <h4 class="event_status5" data-user-key="5">Мероприятий нет</h4>
-                <h5 class="time5">10:00-11:00 12:30-14:00 15:10-17:20</h5>
-            </li>
-            <li class="list" id="list6">
-                <div class="date">
-                    <h3 class="date_title">6</h3>
-                    <h6 class="date_name">Ср</h6>
-                </div>
-                <h4 class="event_status6" data-user-key="6">Мероприятий нет</h4>
-                <h5 class="time6">10:00-11:00 12:30-14:00 15:10-17:20</h5>
-            </li>
-            <li class="list" id="list7">
-                <div class="date">
-                    <h3 class="date_title">7</h3>
-                    <h6 class="date_name">Чт</h6>
-                </div>
-                <h4 class="event_status7" data-user-key="7">Мероприятий нет</h4>
-                <h5 class="time7">10:00-11:00 12:30-14:00 15:10-17:20</h5>
-            </li>
-            </ul>
-            <dialog id="dialog">
-                <div class="row">
-                    <img class="list_icon" src="img/list.png"/>
-                    <h2 class="dialog_title">Назначить мероприятие?</h2>
-                </div>
-                <div class="row_left">
-                    <img class="event_icon" src="img/event.png"/>
-                    <h4>Выберите из списка:</h4>
-                    <ul>
-                        <li class="menu" id="menu_event">
-                            <a class="abovelist" id="event">Мероприятие</a>
-                            <ul class="menu-content">
-                                <li><a class="list_item">День рождение</a></li>
-                                <li><a class="list_item">Корпоратив</a></li>
-                                <li><a class="list_item">Найм сотрудников</a></li>
-                                <li><a class="list_item">Другое</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="row_left">
-                    <img class="time_icon" src="img/time.png"/>
-                    <h4>Выберите время: </h4>
-                    <ul>
-                        <li class="menu" id="menu_time">
-                            <a class="abovelist" id="time">Время</a>
-                            <ul class="menu-content" id="timeList">
-                                <li><a class="list_item">10:00-11:00</a></li>
-                                <li><a class="list_item">12:00-14:30</a></li>
-                                <li><a class="list_item">15:10-17:20</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-                <div class="row_center">
-                    <button id="okd_button" class="okd_button">OK</button>
-                    <button id="canceld_button" class="canceld_button">Наташа отмена</button>
-                </div>
-            </dialog>
-            
- 
-    </div>
-    <script src="script.js"></script>
-    </body>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <div class="info">
+            <img class="phone" src="img/phone.png"/>
+            <h3>+7 (111) 111-11-11</h3>
+            <img class="map" src="img/map.png"/>
+            <h3>Улица Пушкина, дом Колотушкина</h3>
+            <a class="icon" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img class="telegram" src="img/telegram.png"/></a>
+            <a class="icon" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img class="vk" src="img/vk.png"/></a>
+        </div>
+    </div> 
+
+    <script src="main.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            navigation:{
+                nextEl:".swiper-button-next",
+                prevEl:".swiper-button-prev",
+            },
+            pagination:{
+                el:".swiper-pagination",
+            },
+            mousewhell:true,
+            keyboard:true,
+        });
+    </script>
+</body>
 </html>

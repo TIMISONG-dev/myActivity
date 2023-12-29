@@ -39,13 +39,18 @@ RegBtn.addEventListener('click', () => {
 
         const user = new User(loginUser, passwordUser, isExecutorChecked, isCustomerChecked);
 
-        const userID = 'User' + createID(users);
-        users[userID] = user;
+        // Generate a unique key for the current user
+        const currentUserKey = 'User' + createID(users);
 
+        // Save user information
+        users[currentUserKey] = user;
         localStorage.setItem('users', JSON.stringify(users));
 
-        console.log(users);
+        // Initialize isCustomer and currentUser in localStorage
+        localStorage.setItem('isCustomer', isCustomerChecked);
+        localStorage.setItem('currentUser', currentUserKey);
 
+        // Redirect to the main page
         window.location.href = 'login.html';
     }
 });

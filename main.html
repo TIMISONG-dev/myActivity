@@ -1,28 +1,215 @@
-
 <html>
-<head>
-    <link rel="stylesheet" href="main.css">
-    <title>Активности</title>
-</head>
-<body>
+    <head>
+    <title>Уберарт</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/list.png" />
+    
+    </head>
+    <body>
     <div class="toolbar">
         <div class="bien-glass"></div>
         <div class="bien-glass-edge"></div>
         <div class="title_and_icon">
             <img class="list_icon" src="img/list.png"/>
-            <h2 class="title">Мои Активности</h2>
+            <h2 class="title">Уберарт</h2>
         </div>
-        <div class="toolbar_buttons">
-            <button class="logBtn" id="logBtn">Войти</button>
-            <button class="regBtn" id="regBtn">Регистрация</button>
+        <div class="row_right_nav">
+            <p id="userInfo" class="UserInfo"></p>
+            <ul>
+                <li class="menu">
+                  <a class="abovelist"><img class="account_icon" src="img/account.png"/></a>
+                  <ul class="menu-content-left">
+                        <li><a class="list_item" id="LogOutBtn">Выйти</a></li>
+                  </ul>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="content">
-        <div class="overlay">
-         <h2 class="overlay-text">Исследуйте новые горизонты планирования времени с нашим интуитивным сервисом! Создавайте, отслеживайте и управляйте своими активностями легко и эффективно. Воплощайте свои планы в жизнь с удобством нашего инновационного сервиса для планирования активностей.</h2>
-         <button class="overlay-button" id="overlay-button">Начать планировать</button>
+    
+    <div class="main">
+        <div class="event-plan">
+            <div class="box" id="box-plan1">
+                <div class="row_left">
+                    <img class="list_icon" src="img/list.png"/>
+                    <h3 class="event_title1">Понедельник в</h3>
+                    <h3 class="event_time1">0:00</h3>
+                </div>
+                <div class="row_left">
+                    <img class="event_icon" src="img/event.png"/>
+                    <h4 class="event_name1">День рождение</h4>
+                </div>
+            </div>
+            <div class="box" id="box-plan2">
+                <div class="row_left">
+                    <img class="list_icon" src="img/list.png"/>
+                    <h3 class="event_title2">Понедельник в</h3>
+                    <h3 class="event_time2">0:00</h3>
+                </div>
+                <div class="row_left">
+                    <img class="event_icon" src="img/event.png"/>
+                    <h4 class="event_name2">День рождение</h4>
+                </div>
+            </div>
+            <div class="box" id="box-plan3">
+                <div class="row_left">
+                    <img class="list_icon" src="img/list.png"/>
+                    <h3 class="event_title3">Понедельник в</h3>
+                    <h3 class="event_time3">0:00</h3>
+                </div>
+                <div class="row_left">
+                    <img class="event_icon" src="img/event.png"/>
+                    <h4 class="event_name3">День рождение</h4>
+                </div>
+            </div>
+            <div class="box" id="box-plan4">
+                <div class="row_left">
+                    <img class="list_icon" src="img/list.png"/>
+                    <h3 class="event_title4">Понедельник в</h3>
+                    <h3 class="event_time4">0:00</h3>
+                </div>
+                <div class="row_left">
+                    <img class="event_icon" src="img/event.png"/>
+                    <h4 class="event_name4">День рождение</h4>
+                </div>
+            </div>
+            <div class="box" id="box-plan5">
+                <div class="row_left">
+                    <img class="list_icon" src="img/list.png"/>
+                    <h3 class="event_title5">Понедельник в</h3>
+                    <h3 class="event_time5">0:00</h3>
+                </div>
+                <div class="row_left">
+                    <img class="event_icon" src="img/event.png"/>
+                    <h4 class="event_name5">День рождение</h4>
+                </div>
+            </div>
+            <div class="box" id="box-plan6">
+                <div class="row_left">
+                    <img class="list_icon" src="img/list.png"/>
+                    <h3 class="event_title6">Понедельник в</h3>
+                    <h3 class="event_time6">0:00</h3>
+                </div>
+                <div class="row_left">
+                    <img class="event_icon" src="img/event.png"/>
+                    <h4 class="event_name6">День рождение</h4>
+                </div>
+            </div>
+            <div class="box" id="box-plan7">
+                <div class="row_left">
+                    <img class="list_icon" src="img/list.png"/>
+                    <h3 class="event_title7">Понедельник в</h3>
+                    <h3 class="event_time7">0:00</h3>
+                </div>
+                <div class="row_left">
+                    <img class="event_icon" src="img/event.png"/>
+                    <h4 class="event_name7">День рождение</h4>
+                </div>
+            </div>
         </div>
+        <ul class="date-list">
+            <li class="list" id="list1">
+                <div class="date">
+                    <h3 class="date_title">1</h3>
+                    <h6 class="date_name">Пт</h6>
+                </div>
+                <h4 class="event_status1" data-user-key="1">Мероприятий нет</h4>
+                <h5 class="time1">10:00-11:00 12:30-14:00 15:10-17:20</h5>
+            </li>
+            <li class="list" id="list2">
+                <div class="date">
+                    <h3 class="date_title">2</h3>
+                    <h6 class="date_name">Сб</h6>
+                </div>
+                <h4 class="event_status2" data-user-key="2">Мероприятий нет</h4>
+                <h5 class="time2">10:00-11:00 12:30-14:00 15:10-17:20</h5>
+                
+            </li>
+            <li class="list" id="list3">
+                <div class="date">
+                    <h3 class="date_title">3</h3>
+                    <h6 class="date_name">Вс</h6>
+                </div>
+                <h4 class="event_status3" data-user-key="3">Мероприятий нет</h4>
+                <h5 class="time3">10:00-11:00 12:30-14:00 15:10-17:20</h5>
+            </li>
+            <li class="list" id="list4">
+                <div class="date">
+                    <h3 class="date_title">4</h3>
+                    <h6 class="date_name">Пн</h6>
+                </div>
+                <h4 class="event_status4" data-user-key="4">Мероприятий нет</h4>
+                <h5 class="time4">10:00-11:00 12:30-14:00 15:10-17:20</h5>
+            </li>
+            <li class="list" id="list5">
+                <div class="date">
+                    <h3 class="date_title">5</h3>
+                    <h6 class="date_name">Вт</h6>
+                </div>
+                <h4 class="event_status5" data-user-key="5">Мероприятий нет</h4>
+                <h5 class="time5">10:00-11:00 12:30-14:00 15:10-17:20</h5>
+            </li>
+            <li class="list" id="list6">
+                <div class="date">
+                    <h3 class="date_title">6</h3>
+                    <h6 class="date_name">Ср</h6>
+                </div>
+                <h4 class="event_status6" data-user-key="6">Мероприятий нет</h4>
+                <h5 class="time6">10:00-11:00 12:30-14:00 15:10-17:20</h5>
+            </li>
+            <li class="list" id="list7">
+                <div class="date">
+                    <h3 class="date_title">7</h3>
+                    <h6 class="date_name">Чт</h6>
+                </div>
+                <h4 class="event_status7" data-user-key="7">Мероприятий нет</h4>
+                <h5 class="time7">10:00-11:00 12:30-14:00 15:10-17:20</h5>
+            </li>
+            </ul>
+            <dialog id="dialog">
+                <div class="row">
+                    <img class="list_icon" src="img/list.png"/>
+                    <h2 class="dialog_title">Назначить мероприятие?</h2>
+                </div>
+                <div class="row_left">
+                    <img class="event_icon" src="img/event.png"/>
+                    <h4>Выберите из списка:</h4>
+                    <ul>
+                        <li class="menu" id="menu_event">
+                            <a class="abovelist" id="event">Мероприятие</a>
+                            <ul class="menu-content">
+                                <li><a class="list_item">День рождения</a></li>
+                                <li><a class="list_item">Корпоратив</a></li>
+                                <li><a class="list_item">Аниматоры на праздник</a></li>
+                                <li><a class="list_item">Художник плакатов</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row_left">
+                    <img class="time_icon" src="img/time.png"/>
+                    <h4>Выберите время: </h4>
+                    <ul>
+                        <li class="menu" id="menu_time">
+                            <a class="abovelist" id="time">Время</a>
+                            <ul class="menu-content" id="timeList">
+                                <li><a class="list_item">10:00-11:00</a></li>
+                                <li><a class="list_item">12:00-14:30</a></li>
+                                <li><a class="list_item">15:10-17:20</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+                <div class="row_center">
+                    <button id="okd_button" class="okd_button">OK</button>
+                    <button id="canceld_button" class="canceld_button">Наташа отмена</button>
+                </div>
+            </dialog>
+            
+ 
     </div>
-    <script src="main.js"></script>
-</body>
+    <script src="script.js"></script>
+    </body>
 </html>
